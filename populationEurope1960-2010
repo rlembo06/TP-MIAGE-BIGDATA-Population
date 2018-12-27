@@ -1,0 +1,52 @@
+Calcule de la moyenne et variance des variables aléatoires de 1960 à 2010 (population totale)
+Selection de European Union:
+> europe<-mydatapop[mydatapop$Country.Code=='EUU',]
+> View (europe)
+
+Selection de European Union population totale :
+> europepop<-europe[europe$Series.Code=='SP.POP.TOTL',]
+
+Placer les valeurs de 1960 à 2010 dans un tableau :
+> moypopeurope<-europepop[5:55]
+> View (moypopeurope)
+
+Moyenne :
+> rowMeans(moypopeurope)
+    13141 
+466185077
+
+Inversion des lignes et des colonnes
+> df<-as.data.frame(t(moypopeurope))
+
+Somme des valeurs dans la colonne 13141 :
+> sum(df$'13141')
+[1] 23775438907
+
+Variable aléatoire :
+> var(df$'13141')
+[1] 667460942894184
+
+Calcule de la proportion de la proportion de population âgée de plus de 65 ans.
+Selection de European Union population totale :
+> europepop601065<-europe[europe$Series.Code=='SP.POP.65UP.TO',]
+> View(europepop601065)
+
+Placer les valeurs de 1960 à 2010 dans un tableau :
+> moyeuropepop601065<-europepop601065[5:55]
+> View(moyeuropepop601065)
+
+Moyenne :
+> rowMeans(moyeuropepop601065)
+   13126 
+63702804 
+
+Inversion des lignes et des colonnes
+df<-as.data.frame(t(moyeuropepop601065))
+
+Somme des valeurs dans la colonne 13126:
+> sum(df$'13126')
+[1] 3248843001
+
+Variable aléatoire :
+> var(df$'13126')
+[1] 179888681032973
