@@ -12,11 +12,11 @@ function(input, output) {
   
   output$testPlot <- renderPlot({
     # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2] 
+    x    <- barChartEurope 
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
     # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    hist(x, breaks = bins, col = 'blue', border = 'red')
   })
   
 }
