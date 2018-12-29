@@ -16,7 +16,7 @@ Moyenne :
 508151264
 
 Inversion des lignes et des colonnes
-> df<-as.data.frame(t(moypopeurope))
+> df<-as.data.frame(t(moypopeurope2))
 
 Somme des valeurs dans la colonne 13141 :
 > sum(df$'13141')
