@@ -1,0 +1,18 @@
+Récupération des données dans R studio :
+
+import https://www.kaggle.com/theworldbank/global-population-estimates
+
+mydatapop <- read.csv("~/Sarah/Master1/MathBigData/TP PopMondial/TP2/global-population-estimates/data.csv", sep=",")
+View(mydatapop)
+
+--> Problème au niveau du header car ce sont les code (string) qui y sont affichés.
+
+> formatC(mydatapop, format = "e", digits = 6)
+Error in is.finite(x) : default method not implemented for type 'list'
+In addition: Warning message:
+In formatC(mydatapop, format = "e", digits = 6) :
+  la classe de 'x' est éliminée
+
+Pour corriger ce problème il faut faire ceci : 
+> options(scipen=999)
+> View(mydatapop)
