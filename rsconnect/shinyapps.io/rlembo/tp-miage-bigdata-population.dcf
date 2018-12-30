@@ -5,6 +5,6 @@ account: rlembo
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 622804
-bundleId: 1788534
+bundleId: 1788558
 url: https://rlembo.shinyapps.io/tp-miage-bigdata-population/
-when: 1546096587.18154
+when: 1546098479.27691

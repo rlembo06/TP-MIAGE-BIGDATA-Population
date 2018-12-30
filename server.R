@@ -14,11 +14,15 @@ function(input, output) {
   
   output$testPlot <- renderPlot({
     # generate bins based on input$bins from ui.R
-    x    <- barChartEurope 
+    x    <- moypopeurope 
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
     # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'blue', border = 'red')
+    #hist(x, breaks = bins, col = 'blue', border = 'red')
+    
+    # Kernel Density Plot
+    d <- density(moypopeurope)
+    plot(d)
   })
   
 }
