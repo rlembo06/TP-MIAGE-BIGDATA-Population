@@ -18,7 +18,8 @@ fluidPage(
     # Show a plot of the generated distribution
     mainPanel(
       plotOutput("distPlot"),
-      plotOutput("testPlot")
+      plotOutput("testPlot"),
+      plotOutput("plotPercent65UpEurope60_10")
     )
   )
 )

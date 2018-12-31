@@ -36,11 +36,6 @@ percentage65UpByYears_Europe11_17 <- 100 * europeYears65Up11_17 / europeYears11_
 
 ###################
 
-# Sélection de l'Union Européene
-europe <- mydatapop[mydatapop$Country.Code == 'EUU',]
-
-# Sélection de la population de l'Union Européene
-europepop = subset(europe, select = -c(Country.Name, Country.Code, Series.Code, Series.Name) )
-
-# UE : Placer les valeurs de 1960 à 2010 dans un tableau :
-moypopeurope <- barplot(europepop$X1960..YR1960., xlab = "Population", ylab = "Country", main="Moyenne population en Europe")
+# Inversion des lignes et des colonnes + plots
+df <- as.data.frame(t(percentage65UpByYears_Europe))
+#df <- barplot(df[,1], xlab = "Population", ylab = "Country", main="% population +65 ans en Europe")

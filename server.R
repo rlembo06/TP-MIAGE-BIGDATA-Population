@@ -12,17 +12,21 @@ function(input, output) {
     hist(x, breaks = bins, col = 'darkgray', border = 'white')
   })
   
-  output$testPlot <- renderPlot({
+  "output$testPlot <- renderPlot({
     # generate bins based on input$bins from ui.R
-    x    <- moypopeurope 
+    x    <- df 
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
     # draw the histogram with the specified number of bins
     #hist(x, breaks = bins, col = 'blue', border = 'red')
     
     # Kernel Density Plot
-    d <- density(moypopeurope)
+    d <- density(df)
     plot(d)
+  })"
+  
+  output$plotPercent65UpEurope60_10 <- renderPlot({
+    barplot(df[,1], xlab = "Population", ylab = "Country", main="% population +65 ans en Europe")
   })
   
 }
