@@ -11,16 +11,16 @@ rangeBetweenColumByName <- function(df, col1, col2) { df[, getIndexColumn(df, co
 totalPopulationByCountry <- mydatapop[mydatapop$Series.Code == 'SP.POP.TOTL',]
 totalPopulationByCountry_65Up <- mydatapop[mydatapop$Series.Code == 'SP.POP.65UP.TO',]
 totalPopulationByCountry1960 <- totalPopulationByCountry[, c("Country.Name", "Country.Code", "X1960..YR1960.")]
-totalPopulationByCountry2018 <- totalPopulationByCountry[, c("Country.Name", "Country.Code", "X2018..YR2018.")]
+totalPopulationByCountry2017 <- totalPopulationByCountry[, c("Country.Name", "Country.Code", "X2017..YR2017.")]
 
 # Population Europe
-europePop2018 <- totalPopulationByCountry2018[totalPopulationByCountry2018$Country.Code == 'EUU',]$X2018..YR2018.
+europePop2017 <- totalPopulationByCountry2017[totalPopulationByCountry2017$Country.Code == 'EUU',]$X2017..YR2017.
 europePop1960 <- totalPopulationByCountry1960[totalPopulationByCountry1960$Country.Code == 'EUU',]$X1960..YR1960.
 europe65Up <- totalPopulationByCountry_65Up[totalPopulationByCountry_65Up$Country.Code == 'EUU',]
 europe <- totalPopulationByCountry[totalPopulationByCountry$Country.Code == 'EUU',]
 
 # Population Monde
-worldPop2018 <- totalPopulationByCountry2018[totalPopulationByCountry2018$Country.Code == 'WLD',]$X2018..YR2018.
+worldPop2017 <- totalPopulationByCountry2017[totalPopulationByCountry2017$Country.Code == 'WLD',]$X2017..YR2017.
 worldPop1960 <- totalPopulationByCountry1960[totalPopulationByCountry1960$Country.Code == 'WLD',]$X1960..YR1960.
 world65Up <- totalPopulationByCountry_65Up[totalPopulationByCountry_65Up$Country.Code == 'WLD',]
 world <- totalPopulationByCountry[totalPopulationByCountry$Country.Code == 'WLD',]

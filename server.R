@@ -81,4 +81,9 @@ function(input, output) {
     ggplot(data, args) + type + title + graphParams + xlab("Années") + ylab("Population")
   })
   
+  output$europePop1960 <- renderText({europePop1960})
+  output$europePop2017 <- renderText({europePop2017})
+  output$worldPop1960 <- renderText({worldPop1960})
+  output$worldPop2017 <- renderText({worldPop2017})
+  
 }
