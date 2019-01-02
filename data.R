@@ -1,3 +1,5 @@
+library(dplyr)
+
 # Importation de la base de données Kaggle
 mydatapop <- read.csv("./data/data.csv", sep=",")
 
@@ -6,7 +8,7 @@ getIndexColumn <- function(df, col) { which(names(df) == col) }
 rangeBetweenColumByName <- function(df, col1, col2) { df[, getIndexColumn(df, col1) : getIndexColumn(df, col2)] }
 
 #GLOBAL : 
-DFpercentage65UpByYears <- data.frame("Years" = 1960:2010, "Europe" = 1960:2010, "World"= 1960:2010)
+DFpercentage65UpByYears_init <- data.frame("Years" = 1960:2010, "Europe" = 1960:2010, "World"= 1960:2010)
 
 # Population totale par pays
 totalPopulationByCountry <- mydatapop[mydatapop$Series.Code == 'SP.POP.TOTL',]
@@ -35,12 +37,7 @@ worldYears <- rangeBetweenColumByName(world, "X1960..YR1960.", "X2010..YR2010.")
 percentage65UpByYears_World <- 100 * worldYears65Up / worldYears
 temp <- as.data.frame(t(percentage65UpByYears_World))
 colnames(temp)[1] = "World"
-DFpercentage65UpByYears$World <- temp$World
-
-DFpercentage65UpByYears_world <- DFpercentage65UpByYears %>% 
-  mutate(region = 'World') %>% 
-  mutate(percentage65Up = World) %>% 
-  select(Years,region, percentage65Up)
+DFpercentage65UpByYears_init$World <- temp$World
 
 # Pourcentage +65 ans Europe de 1960 à 2010
 europeYears65Up <- rangeBetweenColumByName(europe65Up, "X1960..YR1960.", "X2010..YR2010.")
@@ -48,16 +45,23 @@ europeYears <- rangeBetweenColumByName(europe, "X1960..YR1960.", "X2010..YR2010.
 percentage65UpByYears_Europe <- 100 * europeYears65Up / europeYears
 temp <- as.data.frame(t(percentage65UpByYears_Europe))
 colnames(temp)[1] = "Europe"
-DFpercentage65UpByYears$Europe <- temp$Europe
+DFpercentage65UpByYears_init$Europe <- temp$Europe
 
-DFpercentage65UpByYears_europe <- DFpercentage65UpByYears %>% 
+DFpercentage65UpByYears_world <- DFpercentage65UpByYears_init %>% 
+  mutate(region = 'World') %>% 
+  mutate(percentage65Up = World) %>% 
+  select(Years,region, percentage65Up)
+
+DFpercentage65UpByYears_europe <- DFpercentage65UpByYears_init %>% 
   mutate(region = 'Europe') %>% 
   mutate(percentage65Up = Europe) %>% 
   select(Years,region, percentage65Up)
 
 # Fusion DFpercentage65UpByYears_europe + DFpercentage65UpByYears_world :
-DFpercentage65UpByYears_2 <- bind_rows(DFpercentage65UpByYears_world,DFpercentage65UpByYears_europe)
+DFpercentage65UpByYears <- bind_rows(DFpercentage65UpByYears_world,DFpercentage65UpByYears_europe)
   
+####
+
 # Pourcentage +65 ans Europe de 2011 à 2017
 europeYears65Up11_17 <- rangeBetweenColumByName(europe65Up, "X2011..YR2011.", "X2017..YR2017.")
 europeYears11_17 <- rangeBetweenColumByName(europe, "X2011..YR2011.", "X2017..YR2017.")
