@@ -16,7 +16,9 @@ function(input, output) {
       color = region
     )
     legend_title <- theme(
-      legend.position="top",
+      axis.title = element_text(size = 17),
+      legend.position = "top",
+      legend.text = element_text(size = 17),
       plot.title = element_text(size = 20, face = "bold")
     )
     
@@ -33,12 +35,50 @@ function(input, output) {
       group = region, 
       color = region
     )
-    legend_title <- theme(
-      legend.position="top",
+    graphParams <- theme(
+      axis.title = element_text(size = 17),
+      legend.position = "top",
+      legend.text = element_text(size = 17),
       plot.title = element_text(size = 20, face = "bold")
     )
     
-    ggplot(data, args) + type + title + legend_title + xlab("Années") + ylab("Pourcentage + 65 ans")
+    ggplot(data, args) + type + title + graphParams + xlab("Années") + ylab("Pourcentage + 65 ans")
+  })
+  
+  output$plotAveragePopEurope<- renderPlot({
+    data <- DFaveragePopEurope
+    title <- ggtitle("Moyenne population Europe")
+    type <- geom_bar(stat="identity", fill="steelblue")
+    args <- aes(
+      x = Years,
+      y = Population
+    )
+    graphParams <- theme(
+      axis.title = element_text(size = 17),
+      legend.position = "top",
+      legend.text = element_text(size = 17),
+      plot.title = element_text(size = 20, face = "bold")
+    )
+    
+    ggplot(data, args) + type + title + graphParams + xlab("Années") + ylab("Population")
+  })
+  
+  output$plotAveragePopWorld<- renderPlot({
+    data <- DFaveragePopWorld
+    title <- ggtitle("Moyenne population Monde")
+    type <- geom_bar(stat="identity", fill="steelblue")
+    args <- aes(
+      x = Years,
+      y = Population
+    )
+    graphParams <- theme(
+      axis.title = element_text(size = 17),
+      legend.position = "top",
+      legend.text = element_text(size = 17),
+      plot.title = element_text(size = 20, face = "bold")
+    )
+    
+    ggplot(data, args) + type + title + graphParams + xlab("Années") + ylab("Population")
   })
   
 }

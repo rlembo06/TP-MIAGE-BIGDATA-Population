@@ -25,8 +25,39 @@ worldPop1960 <- totalPopulationByCountry1960[totalPopulationByCountry1960$Countr
 world65Up <- totalPopulationByCountry_65Up[totalPopulationByCountry_65Up$Country.Code == 'WLD',]
 world <- totalPopulationByCountry[totalPopulationByCountry$Country.Code == 'WLD',]
 
-# Moyenne population Europe de 1960 à 2010
-averagePopEurope60_10 <- rowMeans(rangeBetweenColumByName(europe, "X1960..YR1960.", "X2010..YR2010."))
+# -------------------------- #
+## MOyenne Population
+
+# Moyenne population Europe
+europe11_17 <- rangeBetweenColumByName(europe, "X2011..YR2011.", "X2017..YR2017.")
+averagePopEurope11_17 <- rowMeans(europe11_17)
+europe60_10 <- rangeBetweenColumByName(europe, "X1960..YR1960.", "X2010..YR2010.")
+averagePopEurope60_10 <- rowMeans(europe60_10)
+
+DFaveragePopEurope <- data.frame(
+  "Years" = c("1960-2010", "2011-2017"), 
+  "Population" = c(averagePopEurope60_10, averagePopEurope11_17)
+)
+
+# Moyenne population Monde
+world11_17 <- rangeBetweenColumByName(world, "X2011..YR2011.", "X2017..YR2017.")
+averagePopWorld11_17 <- rowMeans(world11_17)
+world60_10 <- rangeBetweenColumByName(world, "X1960..YR1960.", "X2010..YR2010.")
+averagePopWorld60_10 <- rowMeans(world60_10)
+
+DFaveragePopWorld <- data.frame(
+  "Years" = c("1960-2010", "2011-2017"), 
+  "Population" = c(averagePopWorld60_10, averagePopWorld11_17)
+)
+
+# -------------------------- #
+
+# Variance population de 1960 à 2010
+europePop60_10 <- as.data.frame(t(europe60_10))
+varPopEurope60_10 <- var(europePop60_10[,1])
+
+worldPop60_10 <- as.data.frame(t(world60_10))
+varPopWorld60_10 <- var(worldPop60_10[,1])
 
 # -------------------------- #
 ## Population de 1960 à 2010
