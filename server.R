@@ -1,32 +1,13 @@
+library(ggplot2)
+
 source("./data.R")
 
 # Define server logic required to draw a histogram
 function(input, output) {
   
-  output$distPlot <- renderPlot({
-    # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2] 
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+  output$plotPercent65Up60_10<- renderPlot({
+    ggplot(DFpercentage65UpByYears_2[DFpercentage65UpByYears_2$region == 'World',]) + geom_line(aes(x=Years,y=percentage65Up)) + ggtitle("Evolution of proportion > 65 years old")
     
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
-  })
-  
-  "output$testPlot <- renderPlot({
-    # generate bins based on input$bins from ui.R
-    x    <- df 
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    
-    # draw the histogram with the specified number of bins
-    #hist(x, breaks = bins, col = 'blue', border = 'red')
-    
-    # Kernel Density Plot
-    d <- density(df)
-    plot(d)
-  })"
-  
-  output$plotPercent65UpEurope60_10 <- renderPlot({
-    barplot(df[,1], xlab = "Population", ylab = "Country", main="% population +65 ans en Europe")
   })
   
 }
