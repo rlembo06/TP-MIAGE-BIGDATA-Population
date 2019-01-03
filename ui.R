@@ -1,24 +1,15 @@
 library(shiny)
 
+source("./data.R")
+
 fluidPage(
-  
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 60,
-                  value = 50)
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot"),
-      plotOutput("testPlot")
-    )
-  )
+  titlePanel("Etude de la population mondiale et européene"),
+  plotOutput("plotPercent65Up60_10"),
+  plotOutput("plotPercent65Up11_17"),
+  p("- Total population Europe en 1960 : ", textOutput("europePop1960")),
+  p("- Total population Europe en 2017 : ", textOutput("europePop2017")),
+  plotOutput("plotAveragePopEurope"),
+  p("- Total population Monde en 1960 : ", textOutput("worldPop1960")),
+  p("- Total population Monde en 2017 : ", textOutput("worldPop2017")),
+  plotOutput("plotAveragePopWorld")
 )
