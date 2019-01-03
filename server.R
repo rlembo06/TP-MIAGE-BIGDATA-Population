@@ -1,10 +1,9 @@
+library(shiny)
 library(ggplot2)
 
 source("./scripts/index.R")
 
-# Define server logic required to draw a histogram
-server <- function(input, output) {
-  
+function(input, output) {
   output$plotPercent65Up60_10<- renderPlot({
     data <- DFpercentage65UpByYears
     type <- geom_line(size=2)
@@ -103,5 +102,4 @@ server <- function(input, output) {
     
     ggplot(data, args) + type + graphParams + xlab("Années") + ylab("Variance")
   })
-  
 }

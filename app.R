@@ -1,8 +1,6 @@
 library(shiny)
-source('./ui/index.R', local = TRUE)
-source('./server/popEU_W-plots.R')
+library(shinydashboard)
+source("./ui/index.R")
+source("./server.R")
 
-shinyApp(
-  ui = ui,
-  server = server
-)
+shinyApp(ui, server)
