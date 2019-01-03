@@ -1,6 +1,6 @@
 library(ggplot2)
 
-source("./data.R")
+source("./scripts/index.R")
 
 # Define server logic required to draw a histogram
 function(input, output) {

@@ -1,7 +1,5 @@
 library(shiny)
 
-source("./data.R")
-
 fluidPage(
   titlePanel("Etude de la population mondiale et européene"),
   plotOutput("plotPercent65Up60_10"),
