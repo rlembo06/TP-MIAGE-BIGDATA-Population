@@ -27,7 +27,6 @@ var(df$`44281`)
 # Résulat
 #[1] 1414212380335748864
 
-
 #	Calcule de la proportion de la proportion de population âgée de plus de 65 ans.
 # Selection de la population mondiale totale :
 europepop601065<-europe[europe$Series.Code=='SP.POP.65UP.TO',]
