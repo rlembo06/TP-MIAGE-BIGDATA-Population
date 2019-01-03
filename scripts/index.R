@@ -30,12 +30,11 @@ world <- totalPopulationByCountry[totalPopulationByCountry$Country.Code == 'WLD'
 
 source("./scripts/averages.R")
 # -------------------------- #
-
-# Variances population
-
-source("./scripts/variances.R")
-# -------------------------- #
 ## Population de + 65 ans
 
 source("./scripts/65Up.R")
+# -------------------------- #
+# Variances population
+
+source("./scripts/variances.R")
 # -------------------------- #
