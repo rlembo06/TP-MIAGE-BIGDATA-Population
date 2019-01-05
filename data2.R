@@ -213,3 +213,40 @@ res2
 #mean of x mean of y 
 # 18.82562  13.55143 
 
+#Affichage plot population européenne de plus de 65 ans (1960-2010)
+res
+names(res)
+#[1] "statistic"   "parameter"   "p.value"     "conf.int"    "estimate"   
+#[6] "null.value"  "alternative" "method"      "data.name"  
+res$statistic
+#       t 
+#3.340936 
+res[['statistic']]
+#       t 
+#3.340936 
+ts1 = replicate(1000,t.test(rnorm(10),rnorm(10))$statistic)
+range(ts1)
+#[1] -3.521099  4.036038
+pts = seq(-3.4,4.0,length=100)
+plot(pts,dt(pts,df=18),col='red',type='l')
+lines(density(ts))
+
+#Affichage plot2 population européenne de plus de 65 ans (2011-2017)
+names(res2)
+#[1] "statistic"   "parameter"   "p.value"     "conf.int"   
+#[5] "estimate"    "null.value"  "alternative" "method"     
+#[9] "data.name"  
+res2$statistic
+#       t 
+#12.78904 
+res2[['statistic']]
+#      t 
+#12.78904 
+ts = replicate(1000,t.test(rnorm(10),rnorm(10))$statistic)
+range(ts)
+#[1] -3.606932  3.654277
+pts = seq(-4.5,4.5,length=100)
+pts = seq(-3.6, 3.6,length=100)
+plot(pts,dt(pts,df=18),col='red',type='l')
+lines(density(ts))
+
