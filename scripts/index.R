@@ -38,3 +38,7 @@ source("./scripts/65Up.R")
 
 source("./scripts/variances.R")
 # -------------------------- #
+# Taux de croissance
+
+source("./scripts/rateGrowth.R")
+# -------------------------- #
