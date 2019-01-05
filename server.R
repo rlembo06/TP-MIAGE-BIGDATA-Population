@@ -102,4 +102,38 @@ function(input, output) {
     
     ggplot(data, args) + type + graphParams + xlab("Années") + ylab("Variance")
   })
+  
+  output$plotGrowth60_10<- renderPlot({
+    data <- DFGrowth60_10
+    type <- geom_line(size=2)
+    args <- aes(
+      x = Years, 
+      y = Growth, 
+      group = Region, 
+      color = Region
+    )
+    legend_title <- theme(
+      legend.position = "top",
+      legend.text = element_text(size = 17)
+    )
+    
+    ggplot(data, args) + type + legend_title + xlab("Années") + ylab("Taux de croissance")
+  })
+  
+  output$plotGrowth11_17<- renderPlot({
+    data <- DFGrowth11_17
+    type <- geom_line(size=2)
+    args <- aes(
+      x = Years, 
+      y = Growth, 
+      group = Region, 
+      color = Region
+    )
+    legend_title <- theme(
+      legend.position = "top",
+      legend.text = element_text(size = 17)
+    )
+    
+    ggplot(data, args) + type + legend_title + xlab("Années") + ylab("Taux de croissance")
+  })
 }

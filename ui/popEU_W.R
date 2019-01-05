@@ -11,6 +11,15 @@ fluidRow(
   ),
   
   fluidRow(
+    box(title = "Taux de croissance (1960 - 2010)", 
+        solidHeader = TRUE, status = "primary", 
+        plotOutput("plotGrowth60_10")),
+    box(title = "Taux de croissance (2011 - 2017)", 
+        solidHeader = TRUE, status = "primary", 
+        plotOutput("plotGrowth11_17"))
+  ),
+  
+  fluidRow(
     box(title = "Moyenne population Europe", 
         solidHeader = TRUE, status = "primary", 
         plotOutput("plotAveragePopEurope")),
