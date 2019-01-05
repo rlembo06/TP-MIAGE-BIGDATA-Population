@@ -42,3 +42,7 @@ source("./scripts/variances.R")
 
 source("./scripts/rateGrowth.R")
 # -------------------------- #
+# T Student
+
+source("./scripts/tStudent.R")
+# -------------------------- #

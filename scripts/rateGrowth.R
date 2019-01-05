@@ -12,10 +12,10 @@ rateGrowthPopulation <- function(region, population, range) {
 }
 
 # Taux de croissance Europe de 1960 à 2010 :
-europeVec06_10 <- as.data.frame(t(europe60_10))
-colnames(europeVec06_10)[1] = "Population"
+europeVec60_10 <- as.data.frame(t(europe60_10))
+colnames(europeVec60_10)[1] = "Population"
 
-DFeuropeGrowth60_10 <- rateGrowthPopulation("Europe", europeVec06_10, c(1960:2010))
+DFeuropeGrowth60_10 <- rateGrowthPopulation("Europe", europeVec60_10, c(1960:2010))
 
 # Taux de croissance Europe de 2011 à 2017 :
 europeVec11_17 <- as.data.frame(t(europe11_17))

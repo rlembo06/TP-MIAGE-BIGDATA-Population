@@ -20,6 +20,12 @@ fluidRow(
   ),
   
   fluidRow(
+    box(title = "Test Student Taux de croissance Europe", 
+        solidHeader = TRUE, status = "primary", 
+        plotOutput("plotDFtStudentEuropeGrowth"))
+  ),
+  
+  fluidRow(
     box(title = "Moyenne population Europe", 
         solidHeader = TRUE, status = "primary", 
         plotOutput("plotAveragePopEurope")),

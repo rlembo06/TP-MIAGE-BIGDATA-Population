@@ -1,3 +1,5 @@
+# Variance : Selon la moyenne, permet de connaitre la proportion + ou - élevé entre les années.
+
 ## Variances population entre Europe et Monde :
 
 varPop11_17 <- var(c(averagePopEurope11_17, averagePopWorld11_17))

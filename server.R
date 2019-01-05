@@ -136,4 +136,8 @@ function(input, output) {
     
     ggplot(data, args) + type + legend_title + xlab("Années") + ylab("Taux de croissance")
   })
+  
+  output$plotDFtStudentEuropeGrowth<- renderPlot({
+    ggplot(aes(x='Growth'), data=DFeuropeGrowth60_66) + geom_density()
+  })
 }
