@@ -22,7 +22,10 @@ fluidRow(
   fluidRow(
     box(title = "Test Student Taux de croissance Europe", 
         solidHeader = TRUE, status = "primary", 
-        plotOutput("plotDFtStudentEuropeGrowth"))
+        plotOutput("plotDFtStudentEuropeGrowth")),
+    box(title = "Test Student Taux de croissance Europe +65 ans", 
+        solidHeader = TRUE, status = "primary", 
+        plotOutput("plotDFtStudentEurope65UpGrowth"))
   ),
   
   fluidRow(

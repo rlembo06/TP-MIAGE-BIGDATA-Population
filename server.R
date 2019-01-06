@@ -138,6 +138,36 @@ function(input, output) {
   })
   
   output$plotDFtStudentEuropeGrowth<- renderPlot({
-    ggplot(aes(x='Growth'), data=DFeuropeGrowth60_66) + geom_density()
+    curve(dt(x, tStudentEuropeGrowth11_17$parameter), from = -6, to = 6, col = "blue", 
+          xlab = "quantile", ylab = "density", lwd = 2)
+    
+    curve(dt(x, tStudentEuropeGrowth60_10$parameter), from = -6, to = 6, col = "red", 
+          xlab = "quantile", ylab = "density", lwd = 2,  add = TRUE)
+    
+    
+    legend("topleft", 
+           legend = paste0(
+             c("DF 2011-2017 : ","DF 1960-2010 : "),
+             c(tStudentEuropeGrowth11_17$parameter, tStudentEuropeGrowth60_10$parameter)
+           ),
+           col = c("blue", "red"),
+           lty = 1)
+  })
+  
+  output$plotDFtStudentEurope65UpGrowth<- renderPlot({
+    curve(dt(x, tStudentEuropeGrowth65Up11_17$parameter), from = -6, to = 6, col = "blue", 
+          xlab = "quantile", ylab = "density", lwd = 2)
+    
+    curve(dt(x, tStudentEuropeGrowth65Up60_10$parameter), from = -6, to = 6, col = "red", 
+          xlab = "quantile", ylab = "density", lwd = 2,  add = TRUE)
+    
+    
+    legend("topleft", 
+           legend = paste0(
+             c("DF 2011-2017 : ","DF 1960-2010 : "),
+             c(tStudentEuropeGrowth65Up11_17$parameter, tStudentEuropeGrowth65Up60_10$parameter)
+           ),
+           col = c("blue", "red"),
+           lty = 1)
   })
 }
