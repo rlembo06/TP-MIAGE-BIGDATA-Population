@@ -16,7 +16,7 @@ temporelles pour étudier la proportion de population âgée de plus de 65 ans."
          
   box(title = "Données utilisées",width = 12,
       solidHeader = TRUE, status = "primary", 
-      "Les données sont proviennent de la plateforme Kaggle : ", tags$a("https://www.kaggle.com/theworldbank/global-population-estimates"), br(),
+      "Les données sont proviennent de la plateforme Kaggle : ", a("Kaggle (global-population-estimates)", href="https://www.kaggle.com/theworldbank/global-population-estimates"), br(),
       "Ces données ont été téléchargées et désarchivées pour exploiter une base en .csv."
   ),
   
@@ -30,7 +30,7 @@ temporelles pour étudier la proportion de population âgée de plus de 65 ans."
       "BLA BLA"
   ),
   
-  box(title = "Membres du projet", width = 12,
+  box(title = "Membres du projet - M1 MIAGE 2018-2019", width = 12,
       solidHeader = TRUE, status = "primary", 
       tags$ul(
         tags$li("LEMBO Romain :",
@@ -58,6 +58,18 @@ temporelles pour étudier la proportion de population âgée de plus de 65 ans."
   
   box(title = "Accès aux sources", width = 12,
       solidHeader = TRUE, status = "primary", 
-      "Lien du repertoire Github contenant le code source :", tags$a("https://github.com/rlembo06/TP-MIAGE-BIGDATA-Population")
+      "Lien du repertoire Github contenant le code source :", a("TP rlembo Github", href="https://github.com/rlembo06/TP-MIAGE-BIGDATA-Population"), br(),
+      tags$b("Composition du repertoire : "), br(),
+      tags$ul(
+        tags$li("Base de données : /data/data.csv"),
+        tags$li("Scripts pour effectuer les statistiques et vérification d'hypothèses : Dossier /scripts/"),
+        tags$li("Scripts pour générer les graphiques : ",
+          tags$ul(
+            tags$li("Création des graphiques : server.R"),
+            tags$li("Affichage des graphiques : /ui/popEU_W.R")
+          )
+        ),
+        tags$li("Rapport final : /ui/rapport.R")
+      )
   )
 )
