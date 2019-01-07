@@ -170,4 +170,12 @@ function(input, output) {
            col = c("blue", "red"),
            lty = 1)
   })
+  
+  output$plot65Rapport<- renderPlot({
+    source("./scripts/plot65Rapport.R")
+  })
+  
+  output$plotGrowthRapport<- renderPlot({
+    source("./scripts/plotGrowthRapport.R")
+  })
 }

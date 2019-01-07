@@ -69,7 +69,9 @@ fluidRow(
       tags$p("Le taux de la population européenne âgée de plus de 65 ans de 2011 à 2017 est significativement supérieur au taux de 1960 à 2010. 
       De plus, plus la statistique de test est grande plus les deux échantillons sont différents, 
       nous pouvons donc conclure que la population européenne est beaucoup plus âgée de 2011 à 2017 
-      que sur les cinquante années précédentes.")
+      que sur les cinquante années précédentes."),
+      
+      plotOutput("plot65Rapport")
   )
   
 )

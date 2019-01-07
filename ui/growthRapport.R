@@ -85,7 +85,9 @@ fluidRow(
     solidHeader = TRUE, status = "primary", 
     tags$b("|Zstat|= 4.24 > 1.94, l'hypothèse nulle est infirmée et l’alternative est confirmée."), br(),
     tags$p("Le taux de croissance moyen de la population européenne de 2011 à 2017 est donc significativement inférieur au taux de croissance moyen de 1960 à 2010. 
-    La population européenne augmente de moins en moins vite.")
+    La population européenne augmente de moins en moins vite."),
+    
+    plotOutput("plotGrowthRapport")
   )
 
 )
