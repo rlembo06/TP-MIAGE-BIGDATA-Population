@@ -1,6 +1,6 @@
 fluidRow(
   
-  titlePanel("Rapport sur la croissance européenne"),
+  titlePanel("1. Rapport sur la croissance européenne"),
   
   box(title = "Contexte", width = 12,
       solidHeader = TRUE, status = "primary", 
