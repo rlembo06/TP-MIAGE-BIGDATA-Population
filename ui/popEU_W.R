@@ -1,3 +1,5 @@
+source("./scripts/index.R")
+
 fluidRow(
   titlePanel("Etude de la population mondiale et européene"),
   
@@ -20,15 +22,6 @@ fluidRow(
   ),
   
   fluidRow(
-    box(title = "Test Student Taux de croissance Europe", 
-        solidHeader = TRUE, status = "primary", 
-        plotOutput("plotDFtStudentEuropeGrowth")),
-    box(title = "Test Student Taux de croissance Europe +65 ans", 
-        solidHeader = TRUE, status = "primary", 
-        plotOutput("plotDFtStudentEurope65UpGrowth"))
-  ),
-  
-  fluidRow(
     box(title = "Moyenne population Europe", 
         solidHeader = TRUE, status = "primary", 
         plotOutput("plotAveragePopEurope")),
@@ -38,19 +31,10 @@ fluidRow(
     box(title = "Total population", 
         solidHeader = TRUE, status = "primary", 
         tags$ul(
-          tags$li("Europe en 1960 : ", textOutput("europePop1960")),
-          tags$li("Europe en 2017 : ", textOutput("europePop2017")),
-          tags$li("Monde en 1960 : ", textOutput("worldPop1960")),
-          tags$li("Monde en 2017 : ", textOutput("worldPop2017"))
+          tags$li("Europe en 1960 : ", europePop1960),
+          tags$li("Europe en 2017 : ", europePop2017),
+          tags$li("Monde en 1960 : ", worldPop1960),
+          tags$li("Monde en 2017 : ", worldPop2017)
         ))
-  ),
-  
-  fluidRow(
-    box(title = "Variance Europe/Monde (1960 - 2010) / (2011 - 2017)", 
-        solidHeader = TRUE, status = "primary", 
-        plotOutput("plotVariancePop")),
-    box(title = "Variance +65 ans Europe/Monde (1960 - 2010) / (2011 - 2017)", 
-        solidHeader = TRUE, status = "primary", 
-        plotOutput("plotVariancePop65Up"))
   )
 )

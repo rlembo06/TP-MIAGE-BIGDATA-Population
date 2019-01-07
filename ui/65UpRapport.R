@@ -54,7 +54,7 @@ fluidRow(
       tags$img(src="images/65/zstat65.PNG"), br(),
       
       tags$b("Vérification avec R Studio :"), br(),
-      tags$img(src="images/65/zstat65.PNG"), br(),
+      tags$img(src="images/65/t-test65R.PNG"), br(),
       
       tags$b("Récupération du degré de liberté (n-1) :"),
       tags$p("De la même manière que dans le cas numéro un nous récupérons le t-Student nous intéressant. 

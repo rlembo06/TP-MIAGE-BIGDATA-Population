@@ -34,15 +34,6 @@ source("./scripts/averages.R")
 
 source("./scripts/65Up.R")
 # -------------------------- #
-# Variances population
-
-source("./scripts/variances.R")
-# -------------------------- #
 # Taux de croissance
 
 source("./scripts/rateGrowth.R")
-# -------------------------- #
-# T Student
-
-source("./scripts/tStudent.R")
-# -------------------------- #
