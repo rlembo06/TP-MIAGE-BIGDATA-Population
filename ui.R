@@ -30,7 +30,7 @@ dashboardPage(
       ),
       
       tabItem(tabName = "informations",
-              source("./ui/rapport.R")
+              source("./ui/informations.R")
       )
       
     )
