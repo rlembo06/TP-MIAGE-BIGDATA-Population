@@ -22,10 +22,21 @@ temporelles pour étudier la proportion de population âgée de plus de 65 ans."
   
   box(title = "Méthodologie", width = 12,
       solidHeader = TRUE, status = "primary", 
-      "BLA BLA"
+      tags$ul(
+        tags$li(tags$b("Collecte des données et des informations"), 
+                tags$p("BLA BLA")),
+        tags$li(tags$b("Etudes et vérifications"), 
+                tags$p("BLA BLA")),
+        tags$li(tags$b("Créations des plots"), 
+                tags$p("BLA BLA")),
+        tags$li(tags$b("Partage du code source"), 
+                tags$p("BLA BLA")),
+        tags$li(tags$b("Communication au sein du groupe"), 
+                tags$p("BLA BLA"))
+      )
   ),
   
-  box(title = "Résultats obtenus, graphique", width = 12,
+  box(title = "Résultats obtenus, graphiques", width = 12,
       solidHeader = TRUE, status = "primary", 
       "BLA BLA"
   ),

@@ -6,8 +6,10 @@ dashboardPage(
   
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Mondiale/Europe", tabName = "popEU_W", icon = icon("globe")),
-      menuItem("Rapport", tabName = "rapport", icon = icon("book"))
+      menuItem("Graphiques", tabName = "popEU_W", icon = icon("chart-pie")),
+      menuItem("Croissances", tabName = "growth", icon = icon("chart-line")),
+      menuItem("Vieillesse", tabName = "65Up", icon = icon("user")),
+      menuItem("Informations", tabName = "informations", icon = icon("info"))
     )
   ),
   
@@ -19,7 +21,15 @@ dashboardPage(
               source("./ui/popEU_W.R")
       ),
     
-      tabItem(tabName = "rapport",
+      tabItem(tabName = "growth",
+              source("./ui/growthRapport.R")
+      ), 
+      
+      tabItem(tabName = "65Up",
+              source("./ui/65UpRapport.R")
+      ),
+      
+      tabItem(tabName = "informations",
               source("./ui/rapport.R")
       )
       
