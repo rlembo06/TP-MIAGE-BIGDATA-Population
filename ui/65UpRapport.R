@@ -4,7 +4,7 @@ fluidRow(
   
   box(title = "Contexte", width = 12,
       solidHeader = TRUE, status = "primary", 
-      tags$b("Vérificattion d'hypothèse statistique : "), br(),
+      tags$b("Vérification d'hypothèse statistique : "), br(),
       
       tags$p("La seconde hypothèse porte sur l'affirmation  ", 
              tags$b("la population européenne est de plus en plus âgée.")),
