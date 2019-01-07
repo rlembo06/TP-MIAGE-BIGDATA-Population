@@ -39,13 +39,13 @@ fluidRow(
     tags$p("Afin de permettre l’analyse des données, nous avons  besoin de récolter les variables qui nous intéressent. Pour se faire nous avons
     commencé par identifier, dans la base de données issue de kaggle,  la population européenne totale au fil des années : "), 
     
-    tags$img("[IMG] image tableau1", src=""), br(),
-    
+    tags$img(src="images/Growth/tableau1.PNG"), br(),
+
     tags$p("Une fois ce dataset sélectionné, nous avons calculé le taux de croissance annuel de la poulation européenne de la 
      manière suivante :"), br(),
     
-    tags$img("[IMG] image TauxCroissanceCal", src=""), br(),
-    tags$img("[IMG] image TauxCroissanceR", src=""), br(),
+    tags$img(src="images/Growth/TauxCroissanceCal.PNG"), br(),
+    tags$img(src="images/Growth/TauxCroissanceR.PNG"), br(),
     
     tags$p("Nous avons choisi de calculé ce taux de croissance de la sorte car les données commencent en 1960. Nous assumons
     ainsi que le nombre de personne dans la population est relevé en début d’années."),
@@ -53,7 +53,7 @@ fluidRow(
     tags$p("Nous avons ainsi calculé ce taux pour les deux échantillons de 1960 à 2010 et pour  l’échantillon expérimental de 2011 à 2017.
     A partir de ces données nous avons pu calculer la moyenne et la variance de ces échantillons :"), br(),
     
-    tags$img("[IMG] image Tableau2", src=""), br()
+    tags$img(src="images/Growth/Tableau2.PNG"), br()
   
   ),
 
@@ -68,17 +68,17 @@ fluidRow(
     
     tags$p("Il faut ensuite  calculer la statistique de test  Zstat définie comme suit :"),
     
-    tags$img("[IMG] image zstat1", src=""), br(),
-    tags$img("[IMG] image zstat2", src=""), br(),
+    tags$img(src="images/Growth/zstat1.PNG"), br(),
+    tags$img(src="images/Growth/zstat2.PNG"), br(),
     
-    tags$b("Vérification avec R Studio :"),
-    tags$img("[IMG] image zstatR", src=""), br(),
+    tags$b("Vérification avec R Studio :"), br(),
+    tags$img(src="images/Growth/zstatR.PNG"), br(),
     
     tags$b("Récupération du degré de liberté (n-1) :"),
     tags$p("Une fois cette statistique de test calculée, nous devons la comparer à la valeur de t Student défini dans la table. Si l'on fixe le niveau de significativité à 5% et on prend un échantillon de la population 
       européenne de 2011 à 2017, (degré de liberté égal à n-1=6), on trouve que le t-Student est égal à 1.9432."),
     
-    tags$img("[IMG] image alpha1", src=""), br()
+    tags$img(src="images/Growth/alpha1.PNG"), br()
   ),
   
   box(title = "Conclusion", width = 12,
