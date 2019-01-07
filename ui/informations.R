@@ -17,7 +17,8 @@ fluidRow(
    box(title = "Données utilisées",width = 12,
       solidHeader = TRUE, status = "primary", 
       "Les données sont proviennent de la plateforme Kaggle : ", a("Kaggle (global-population-estimates)", href="https://www.kaggle.com/theworldbank/global-population-estimates"), br(),
-      "Ces données ont été téléchargées et désarchivées pour exploiter une base en .csv."
+      "Ces données ont été téléchargées et désarchivées pour exploiter une base en .csv.", br(),
+      ""
   ),
 
   box(title = "Accès aux sources", width = 12,
@@ -33,9 +34,15 @@ fluidRow(
             tags$li("Affichage des graphiques : /ui/popEU_W.R")
           )
         ),
-        tags$li("Rapport final : /ui/rapport.R")
+        tags$li("Rapport final : Il est découpé en 3 parties", 
+        tags$ul(
+            tags$li("Croissance: /ui/growthRapport.R"),
+            tags$li("Vieillesse: /ui/65UpRapport.R"),
+            tags$li("Informations: /ui/informations.R")
+          )
+        )
       )
-  )
+  ),
 
   box(title = "Membres du projet - M1 MIAGE 2018-2019", width = 12,
       solidHeader = TRUE, status = "primary", 
@@ -60,6 +67,6 @@ fluidRow(
             )
           )
       )
-  ),
+  )
   
 )
