@@ -6,8 +6,7 @@ fluidRow(
       solidHeader = TRUE, status = "primary", 
       tags$b("Vérification d'hypothèse statistique : "), br(),
       
-      tags$p("La seconde hypothèse porte sur l'affirmation  ", 
-             tags$b("la population européenne est de plus en plus âgée.")),
+      tags$p("La seconde hypothèse porte sur l'affirmation que", tags$b("la population européenne est de plus en plus âgée.")),
       
       tags$p("La variable porte cette fois sur  ", 
              tags$b("le taux de la population européenne âgée de plus de 65ans. "), 
@@ -48,13 +47,13 @@ fluidRow(
   box(title = "Vérification des hypothèses",width = 12,
       solidHeader = TRUE, status = "primary", 
       
-      tags$p("PDe la même manière que pour l’étude numéro un, nous devons calculer la statistique 
+      tags$p("De la même manière que pour l’étude numéro un, nous devons calculer la statistique 
              de test Zstat et la comparer au t de Student correspondant pour valider H0 ou H1. "),
   
       tags$img(src="images/65/zstat65.PNG"), br(),
       
       tags$b("Vérification avec R Studio :"), br(),
-      tags$img(src="images/65/t-test65R.PNG"), br(),
+      tags$img(src="images/65/t-test65R.PNG"), br(), br(),
       
       tags$b("Récupération du degré de liberté (n-1) :"),
       tags$p("De la même manière que dans le cas numéro un nous récupérons le t-Student nous intéressant. 

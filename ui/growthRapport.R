@@ -20,7 +20,7 @@ fluidRow(
   
   box(title = "Hypothèse H0 et H1",width = 12,
     solidHeader = TRUE, status = "primary", 
-    tags$p("Pour valider ou invalider cette affirmation, nous allons réaliser un test de Student.", 
+    tags$p("Pour valider ou invalider cette affirmation, nous allons réaliser un", tags$b("test de Student"), ".", 
            "Ce test a pour but de comparer deux échantillons et déterminer si les échantillons sont semblables ou significativement différents. 
            Pour réaliser ce test et comparer les deux échantillons nous posons deux hypothèses."),
     
@@ -72,7 +72,7 @@ fluidRow(
     tags$img(src="images/Growth/zstat2.PNG"), br(),
     
     tags$b("Vérification avec R Studio :"), br(),
-    tags$img(src="images/Growth/zstatR.PNG"), br(),
+    tags$img(src="images/Growth/zstatR.PNG"), br(), br(),
     
     tags$b("Récupération du degré de liberté (n-1) :"),
     tags$p("Une fois cette statistique de test calculée, nous devons la comparer à la valeur de t Student défini dans la table. Si l'on fixe le niveau de significativité à 5% et on prend un échantillon de la population 
