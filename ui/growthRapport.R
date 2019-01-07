@@ -26,11 +26,11 @@ fluidRow(
     
     tags$b("H0 = Hypothèse nulle :"), br(),
     tags$p("Le taux de croissance de la population européenne de 2011 à 2017 est
-           équivalent aux cinquante années précédentes (de 1960 à 2010). H0: m = 0.4%"),
+           équivalent aux cinquante années précédentes (de 1960 à 2010).", tags$b("H0: m = 0.4%")),
     
     tags$b("H1 = Hypothèse alternative :"), br(),
     tags$p("Le taux de croissance moyen de la population européenne de 2011 à 2017 est significativement 
-           inférieur au taux de croissance moyen de 1960 à 2010. H1: m < 0.4%")
+           inférieur au taux de croissance moyen de 1960 à 2010.", tags$b("H1: m < 0.4%"))
   
   ),
 
@@ -47,7 +47,7 @@ fluidRow(
     tags$img(src="images/Growth/TauxCroissanceCal.PNG"), br(),
     tags$img(src="images/Growth/TauxCroissanceR.PNG"), br(),
     
-    tags$p("Nous avons choisi de calculé ce taux de croissance de la sorte car les données commencent en 1960. Nous assumons
+    tags$p("Nous avons choisi de calculer ce taux de croissance de la sorte car les données commencent en 1960. Nous assumons
     ainsi que le nombre de personne dans la population est relevé en début d’années."),
     
     tags$p("Nous avons ainsi calculé ce taux pour les deux échantillons de 1960 à 2010 et pour  l’échantillon expérimental de 2011 à 2017.

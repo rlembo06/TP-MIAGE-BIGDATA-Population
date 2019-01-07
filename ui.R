@@ -7,7 +7,7 @@ dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       menuItem("Graphiques", tabName = "popEU_W", icon = icon("chart-pie")),
-      menuItem("Croissances", tabName = "growth", icon = icon("chart-line")),
+      menuItem("Croissance", tabName = "growth", icon = icon("chart-line")),
       menuItem("Vieillesse", tabName = "65Up", icon = icon("user")),
       menuItem("Informations", tabName = "informations", icon = icon("info"))
     )

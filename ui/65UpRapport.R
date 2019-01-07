@@ -22,11 +22,11 @@ fluidRow(
       
       tags$b("H0 = Hypothèse nulle :"), br(),
       tags$p("Le taux de la population européenne de 2011 à 2017 âgée de plus de 65ans est 
-             équivalent au taux des cinquante années précédentes (de 1960 à 2010). H0: m =13,55143%"),
+             équivalent au taux des cinquante années précédentes (de 1960 à 2010).", tags$b("H0: m =13,55143%")),
       
       tags$b("H1 = Hypothèse alternative :"), br(),
       tags$p("Le taux de la population européenne de 2011 à 2017 âgée de plus de 65ans est  
-             significativement supérieur  à celui de 1960 à 2010. H1: m > 13,55143%")
+             significativement supérieur  à celui de 1960 à 2010.", tags$b("H1: m > 13,55143%"))
       
       ),
   
