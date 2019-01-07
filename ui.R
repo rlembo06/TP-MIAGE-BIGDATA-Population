@@ -22,11 +22,11 @@ dashboardPage(
       ),
     
       tabItem(tabName = "growth",
-              source("./ui/growthRapport.R")
+              source("./REP/growthRapport.R")
       ), 
       
       tabItem(tabName = "65Up",
-              source("./ui/65UpRapport.R")
+              source("./REP/65UpRapport.R")
       ),
       
       tabItem(tabName = "informations",

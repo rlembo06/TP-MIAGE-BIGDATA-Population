@@ -103,10 +103,10 @@ function(input, output) {
   })
   
   output$plot65Rapport<- renderPlot({
-    source("./scripts/plot65Rapport.R")
+    source("./FIG/plot65Rapport.R")
   })
   
   output$plotGrowthRapport<- renderPlot({
-    source("./scripts/plotGrowthRapport.R")
+    source("./FIG/plotGrowthRapport.R")
   })
 }

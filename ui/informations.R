@@ -8,48 +8,23 @@ fluidRow(
       a("TP rlembo Github", href="https://github.com/rlembo06/TP-MIAGE-BIGDATA-Population"), br(),
       tags$b("Composition du repertoire : "), br(),
       tags$ul(
-        tags$li("Base de données : /data/data.csv"),
-        tags$li("Scripts pour effectuer les statistiques (Onglet \"Graphiques\") : ", 
+        tags$li("Scripts pour effectuer les statistiques et vérification d'hypothèses (R) : /R/data.stats.R"),
+        tags$li("Scripts pour générer les graphiques (FIG) : ",
           tags$ul(
-            tags$li("Proportion +65 ans : /scripts/65Up.R"),
-            tags$li("Moyenne population : /scripts/averages.R"),
-            tags$li("Taux de croissance : /scripts/rateGrowth.R")
+            tags$li("Graphique sur le vieillissement : /FIG/plot65Rapport.R"),
+            tags$li("Graphique sur sur la croissance : /FIG/plotGrowthRapport.R")
           )
         ),
-        tags$li("Scripts pour générer les graphiques (Onglet \"Graphiques\") : ",
-          tags$ul(
-            tags$li("Création des graphiques : server.R"),
-            tags$li("Affichage des graphiques : /ui/popEU_W.R")
-          )
-        ),
-        tags$li("Scripts pour effectuer les statistiques et vérification d'hypothèses : Dossier /scripts/data.stats.R"),
-        tags$li("Scripts pour générer les graphiques : ",
-          tags$ul(
-            tags$li("Création des graphiques : ",
-              tags$ul(
-                tags$li("Rapport sur le vieillissement : /scripts/plot65Rapport.R"),
-                tags$li("Rapport sur la croissance : /scripts/plotGrowthRapport.R")
-              )
-            ),
-            tags$li("Affichage des graphiques : ",
-              tags$ul(
-                tags$li("Rapport sur le vieillissement : /ui/65UpRapport.R"),
-                tags$li("Rapport sur la croissance : /ui/growthRapport.R")
-              )
-            )
-          )
-        ),
-        br(),
-        tags$li("Rapport final : Il est découpé en 2 parties", 
+        tags$li("Rapport final (REP) : Découpé en 2 parties", 
         tags$ul(
-            tags$li("Croissance: /ui/growthRapport.R"),
-            tags$li("Vieillesse: /ui/65UpRapport.R")
+            tags$li("Croissance: /REP/growthRapport.R"),
+            tags$li("Vieillesse: /REP/65UpRapport.R")
           )
         )
       )
   ),
 
-  box(title = "Membres du projet - M1 MIAGE 2018-2019", width = 12,
+  box(title = "Membres du projet (Groupe 17) - M1 MIAGE 2018-2019", width = 12,
       solidHeader = TRUE, status = "primary", 
       tags$ul(
         tags$li("LEMBO Romain :",
