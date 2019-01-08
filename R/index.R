@@ -28,12 +28,12 @@ world <- totalPopulationByCountry[totalPopulationByCountry$Country.Code == 'WLD'
 # -------------------------- #
 ## Moyennes Population
 
-source("./scripts/averages.R")
+source("./R/averages.R")
 # -------------------------- #
 ## Population de + 65 ans
 
-source("./scripts/65Up.R")
+source("./R/65Up.R")
 # -------------------------- #
 # Taux de croissance
 
-source("./scripts/rateGrowth.R")
+source("./R/rateGrowth.R")

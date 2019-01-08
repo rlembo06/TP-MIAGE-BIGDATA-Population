@@ -1,4 +1,4 @@
-source("./scripts/index.R")
+source("./R/index.R")
 
 fluidRow(
   titlePanel("Etude de la population mondiale et européene"),

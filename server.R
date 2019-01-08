@@ -1,7 +1,7 @@
 library(shiny)
 library(ggplot2)
 
-source("./scripts/index.R")
+source("./R/index.R")
 
 function(input, output) {
   output$plotPercent65Up60_10<- renderPlot({

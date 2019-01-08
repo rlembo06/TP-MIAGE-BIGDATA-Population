@@ -24,7 +24,7 @@ fluidRow(
       )
   ),
 
-  box(title = "Membres du projet (Groupe 17) - M1 MIAGE 2018-2019", width = 12,
+  box(title = "Membres du projet (Groupe 15) - M1 MIAGE 2018-2019", width = 12,
       solidHeader = TRUE, status = "primary", 
       tags$ul(
         tags$li("LEMBO Romain :",
